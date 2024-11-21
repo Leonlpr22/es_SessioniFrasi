@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <title>Inserisci Frase</title>
+</head>
+
+<style>
+    h1 {
+        font-family: 'MedievalSharp', cursive;
+        color: #8B4513;
+    }
+
+    textarea {
+        font-family: 'MedievalSharp', cursive;
+        border: 5px solid #8B4513;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #db9a38;
+        font-size: 16px;
+        width: 80%;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+
+    textarea:hover {
+        border-color: #6b3c1b;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    }
+
+    textarea:focus {
+        border-color: #3d2a1f;
+        background-color: #fff7e6;
+        box-shadow: 0 0 55px rgba(0, 0, 0, 0.3);
+        transform: scale(1.02);
+    }
+
+    body {
+        font-family: 'MedievalSharp', cursive;
+        margin: auto;
+        text-align: center;
+        background-color: bisque;
+    }
+
+    button {
+        font-family: 'MedievalSharp', cursive;
+        background-color: #D2B48C;
+        border: 2px solid #8B4513;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <h1>INSERISCI LA TUA FRASE</h1>
+
+    <form action="script.php" method="POST">
+        <h2><label for="frase">Frase:</label></h2><br>
+        <textarea id="frase" name="frase" rows="4" cols="50" required></textarea><br><br>
+
+        <h2><label for="importanza">Importanza: </label></h2><br>
+        <select id="importanza" name="importanza">
+            <option value="1">1. Bassa</option>
+            <option value="2">2. Media</option>
+            <option value="3">3. Alta</option>
+            <option value="4">4. Massima</option>
+        </select><br><br><br>
+
+        <button type="submit">Invia</button>
+    </form>
+
+    <br>
+
+    <a href="riepilogo.php">Vai alla pagina Riepilogo</a>
+</body>
+
+</html>
